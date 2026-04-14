@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+.header-main{
+    padding: 25px 50px;
+   background: linear-gradient(to bottom, #fff 0%, #fff 50%, #121D50 50%, #121D50 100%);
+   font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+}
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #090E23;
+}
+
+.header-logo h1{
+    font-size: 16px;
+    line-height: 100%;
+    font-weight: 500;
+}
+
+.header-main button {
+  background-color: #EC4621;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.header-main button:hover {
+  background-color: #d63d1d;
+}
+
