@@ -1,0 +1,335 @@
+.landing {
+  --yellow: #f5d10a;
+  --yellow-hover: #e6c400;
+  --ink: #1a1a1a;
+  --nav: #fff;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(
+    165deg,
+    #c5e8f7 0%,
+    #8fd0e8 22%,
+    #6bc0d8 38%,
+    #a8d8e8 48%,
+    #d4e8f0 52%,
+    #e8dcc8 62%,
+    #e5d5b5 100%
+  );
+  color: var(--ink);
+  font-family: Montserrat, system-ui, sans-serif;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: clamp(12px, 3vw, 40px);
+  padding: clamp(16px, 2.5vw, 28px) clamp(20px, 4vw, 56px) 12px;
+  position: relative;
+  z-index: 2;
+}
+
+.logo {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: clamp(1.05rem, 1.8vw, 1.35rem);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.logo__cook {
+  color: var(--ink);
+}
+
+.logo__travel {
+  color: var(--yellow);
+}
+
+.nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: clamp(10px, 1.6vw, 28px);
+}
+
+.nav a {
+  color: var(--nav);
+  text-decoration: none;
+  font-size: clamp(0.72rem, 1.05vw, 0.9rem);
+  font-weight: 500;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  transition: color 0.2s, opacity 0.2s;
+}
+
+.nav a:hover {
+  color: var(--yellow);
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  gap: clamp(10px, 1.2vw, 18px);
+}
+
+.social__link {
+  color: var(--nav);
+  display: flex;
+  width: 22px;
+  height: 22px;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+  transition: color 0.2s, transform 0.2s;
+}
+
+.social__link:hover {
+  color: var(--yellow);
+  transform: scale(1.08);
+}
+
+.social__link svg {
+  width: 100%;
+  height: 100%;
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: var(--nav);
+}
+
+.nav-toggle span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: currentColor;
+  border-radius: 1px;
+}
+
+.hero {
+  flex: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(300px, 1.25fr);
+  align-items: end;
+  gap: clamp(8px, 2vw, 32px);
+  padding: 0 clamp(20px, 4vw, 56px) clamp(20px, 4vh, 48px);
+  position: relative;
+  min-height: 0;
+}
+
+.hero__copy {
+  align-self: center;
+  padding-bottom: clamp(16px, 4vh, 48px);
+  max-width: 520px;
+}
+
+.hero__title {
+  margin: 0 0 clamp(12px, 2vh, 20px);
+  font-size: clamp(2.5rem, 7vw, 4.75rem);
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+}
+
+.hero__title-cook {
+  color: var(--ink);
+  text-shadow:
+    2px 2px 0 var(--yellow),
+    -1px -1px 0 rgba(255, 255, 255, 0.5),
+    0 4px 24px rgba(0, 0, 0, 0.12);
+}
+
+.hero__title-travel {
+  color: var(--yellow);
+  text-shadow:
+    2px 2px 0 var(--ink),
+    0 0 1px var(--ink),
+    0 4px 24px rgba(0, 0, 0, 0.15);
+}
+
+.hero__subtitle {
+  margin: 0 0 clamp(20px, 3vh, 32px);
+  font-size: clamp(0.95rem, 1.5vw, 1.15rem);
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.35;
+  max-width: 22ch;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.hero__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 168px;
+  padding: 14px 32px;
+  background: var(--yellow);
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border-radius: 2px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.hero__cta:hover {
+  background: var(--yellow-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.16);
+}
+
+.hero__cta:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+
+.hero__visual {
+  position: relative;
+  height: min(82vh, 900px);
+  min-height: 320px;
+  overflow: hidden;
+  border-radius: 0 0 0 8px;
+  margin-right: clamp(-12px, -1vw, 0);
+}
+
+/*
+  hero.png — butun maket skrinshoti (matn + menyu ham bor).
+  Kadr: faqat o‘ng-pastdagi qum/ananas — chapdagi HTML bilan takrorlanmasin.
+*/
+.hero__frame {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.hero__photo {
+  position: absolute;
+  width: 200%;
+  max-width: none;
+  height: 125%;
+  right: 0;
+  bottom: -8%;
+  object-fit: cover;
+  object-position: 91% 68%;
+  pointer-events: none;
+  user-select: none;
+}
+
+@media (max-width: 960px) {
+  .header {
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+  }
+
+  .nav {
+    grid-column: 1 / -1;
+    order: 3;
+  }
+
+  .nav__list {
+    justify-content: flex-start;
+    gap: 12px 18px;
+  }
+
+  .social {
+    justify-self: end;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero__copy {
+    max-width: none;
+    padding-bottom: 8px;
+    order: 1;
+  }
+
+  .hero__subtitle {
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero__visual {
+    order: 2;
+    height: min(52vh, 520px);
+    min-height: 260px;
+    margin-right: 0;
+    border-radius: 0;
+  }
+
+  .hero__photo {
+    width: 230%;
+    height: 120%;
+    bottom: -6%;
+    object-position: 88% 58%;
+  }
+}
+
+@media (max-width: 640px) {
+  .nav {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    padding: 16px 20px 20px;
+    background: rgba(20, 45, 55, 0.92);
+    backdrop-filter: blur(8px);
+  }
+
+  .header--menu-open .nav {
+    display: block;
+  }
+
+  .header--menu-open .nav__list {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .nav-toggle {
+    display: flex;
+    justify-self: end;
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .header--menu-open .nav-toggle span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .header--menu-open .nav-toggle span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .header--menu-open .nav-toggle span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .nav-toggle span {
+    transition: transform 0.2s, opacity 0.2s;
+  }
+
+  .social {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .header {
+    grid-template-columns: 1fr auto auto;
+    align-items: start;
+  }
+}

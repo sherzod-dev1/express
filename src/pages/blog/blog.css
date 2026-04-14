@@ -1,0 +1,154 @@
+.action-section {
+  background-color: #1a4fff; /* Bright blue background from image */
+  padding: 80px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.action-content {
+  max-width: 1100px;
+  width: 100%;
+  padding: 0 20px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.action-title {
+  color: white;
+  font-size: 48px;
+  font-weight: 800;
+  margin: 0 0 16px 0;
+  letter-spacing: 1px;
+}
+
+.action-subtitle {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 16px;
+  margin: 0 0 40px 0;
+  font-weight: 400;
+}
+
+.play-button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.play-button {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+}
+
+.play-button::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid white;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+  opacity: 0.6;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+.play-button:hover {
+  transform: scale(1.15);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  background-color: #f8f9ff;
+}
+
+.play-button:hover svg {
+  transform: scale(1.1);
+  fill: #f15a24;
+}
+
+.play-button svg {
+  width: 40px;
+  height: 40px;
+  margin-left: 5px; /* Adjust for play icon centering */
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .action-title {
+    font-size: 32px;
+  }
+  
+  .play-button {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* Video Modal */
+.video-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeIn 0.3s ease;
+}
+
+.video-modal-content {
+  position: relative;
+  width: 90%;
+  max-width: 900px;
+  aspect-ratio: 16 / 9;
+  background: black;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.close-button {
+  position: absolute;
+  top: -45px;
+  right: 0;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.close-button:hover {
+  transform: rotate(90deg);
+}
+
+.iframe-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

@@ -1,120 +1,89 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
+import React from 'react'
+import Logo from './pages/logo/Logo'
+import Blog from './pages/blog/Blog'
+import ContactUs from './pages/contact us/Contact Us'
+import Footer from './pages/footer/Footer'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+    <div className="app-container">
+      <Logo />
 
-      <div className="ticks"></div>
+      <main className="main-content">
+        <section className="hero-section">
+          <div className="hero-left">
+            <div className="video-placeholder"></div>
+          </div>
+          <div className="hero-right">
+            <span className="subtitle">HOW IT WORKS</span>
+            <h1>SIMPLIFY YOUR SHIPPING EXPERIENCE WITH OUR EASY STEP PROCESS</h1>
+            <p>
+              At FastGo, we believe in providing our clients with personalized and
+              efficient logistics solutions that meet their unique needs. With years of
+              experience and a team of experts, we are dedicated to empowering your
+              business with seamless shipping experiences.
+            </p>
+          </div>
+        </section>
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+        <div className="divider"></div>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+        <section className="steps-section">
+          <div className="step-item">
+            <span className="step-label">Step 1</span>
+            <div className="step-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 8L12 3L3 8V16L12 21L21 16V8Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M3 8L12 13L21 8" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M12 13V21" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </div>
+            <h3>REQUEST A QUOTE</h3>
+            <p>
+              At FastGo, we believe in providing our clients with personalized and
+              efficient logistics solutions that meet their unique needs.
+            </p>
+          </div>
+
+          <div className="step-item">
+            <span className="step-label">Step 2</span>
+            <div className="step-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 8L12 3L3 8V16L12 21L21 16V8Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M3 8L12 13L21 8" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M12 13V21" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </div>
+            <h3>PROVIDE DETAILS</h3>
+            <p>
+              At FastGo, we believe in providing our clients with personalized and
+              efficient logistics solutions that meet their unique needs.
+            </p>
+          </div>
+
+          <div className="step-item">
+            <span className="step-label">Step 3</span>
+            <div className="step-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 8L12 3L3 8V16L12 21L21 16V8Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M3 8L12 13L21 8" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M12 13V21" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </div>
+            <h3>SCHEDULE PICK-UP</h3>
+            <p>
+              At FastGo, we believe in providing our clients with personalized and
+              efficient logistics solutions that meet their unique needs.
+            </p>
+          </div>
+        </section>
+      </main>
+
+      <Blog />
+      <ContactUs />
+      <Footer />
+    </div>
   )
 }
 
